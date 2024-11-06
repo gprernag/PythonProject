@@ -20,7 +20,7 @@ class ColorGame:
         self.player2_name = ""
         self.score_player1 = 0
         self.score_player2 = 0
-        self.timeleft = 5
+        self.timeleft = 30
         self.current_player = 1
 
         self.setup_ui()
@@ -146,7 +146,7 @@ class GameWindow:
 
 
         self.turnLabel.config(text=f"It's {self.game.player2_name}'s turn!", font=('Helvetica', 14))
-        self.game.timeleft = 5
+        self.game.timeleft = 30
         self.next_colour()
         self.countdown()
 
