@@ -174,7 +174,7 @@ class GameWindow:
 
         self.animate_text(winner_label, winner_window)
 
-        self.game_window.destroy()
+        # self.game_window.destroy()
 
 
 
