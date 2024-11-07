@@ -5,6 +5,7 @@ import tictactoe
 import tkinter as tk
 import rockScissor
 import sudoku
+import guessGame
 from tkinter import *
 
 def colouringgame():
@@ -18,6 +19,8 @@ def game3():
 
 def game4():
     sudoku.main()
+def game5():
+    guessGame.main()
 
 def center_window():
     # Get the screen width and height
@@ -37,6 +40,8 @@ x = (getWidth // 2) - (w // 2)
 y = (getHeight // 2) - (h // 2)
 root.geometry(f"{w}x{h}+{x}+{y}")
 
+
+
 # Load button images
 photo1 = PhotoImage(file=r"tictac.png")
 photo2 = PhotoImage(file=r"color.png")
@@ -49,7 +54,7 @@ button1 = tk.Button(root, image=photo2, text="Coloring Game", command=colouringg
 button2 = tk.Button(root, image=photo1, text="Tic Tac Toe", command=tictac, font=("Arial", 20), padx=20, pady=20)
 button3 = tk.Button(root, image=photo3, text="Rock Paper Scissor", command=game3, font=("Arial", 20), padx=20, pady=20)
 button4 = tk.Button(root, image=photo4, text="Sudoku", command=game4, font=("Arial", 20), padx=20, pady=20)
-button5 = tk.Button(root, image=photo5, text="Guess the Number", font=("Arial", 20), padx=20, pady=20)
+button5 = tk.Button(root, image=photo5, text="Guess the Number",command=game5, font=("Arial", 20), padx=20, pady=20)
 
 # Arrange buttons in a 2x3 grid
 button1.grid(row=0, column=0, padx=10, pady=10)
